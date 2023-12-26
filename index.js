@@ -2,7 +2,8 @@ const express = require("express");
 const homeRoute = require("./routes/home");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const uri = "mongodb://127.0.0.1:27017/travelid";
+const uri =
+  "mongodb+srv://1217050018:YkYEMvsg4fQwGHb2@mymongodb.mljk56m.mongodb.net/?retryWrites=true&w=majority";
 const app = express();
 const port = 3000;
 
