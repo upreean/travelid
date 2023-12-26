@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel.id | Order</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Tilt+Neon&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link rel="icon" href="/img/icon-blue.png" />
+  </head>
+  <body>
+    <header><%- include ('header') %></header>
+    <div class="reservation-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Reservation Form</h2>
+        </div>
+        <div class="form-input">
+          <form method="post" action="/add">
+            <!-- Nama -->
+            <label for="name" class="form-label">Name :</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Input Your Name"
+              required
+            />
+
+            <!-- Destinasi Tujuan -->
+            <label for="destination" class="form-label">Destination :</label>
+            <select
+              name="destination"
+              id="destination"
+              onchange="getCalculatePrice()"
+              oninput="getCalculatePrice()"
+            >
+              <option value="Tangerang">Tangerang</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Jakarta">Jakarta</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Solo">Solo</option>
+              <option value="Yogyakarta">Yogyakarta</option>
+              <option value="Banda Aceh">Banda Aceh</option>
+              <option value="Padang">Padang</option>
+              <option value="Palembang">Palembang</option>
+              <option value="Lampung">Lampung</option>
+            </select>
+
+            <!-- Tanggal Keberangkatan -->
+            <label for="date" class="form-label">Date :</label>
+            <input type="datetime-local" id="date" name="date" required />
+
+            <!-- Harga Tiket -->
+            <label for="price" class="form-label">Price :</label>
+            <input type="text" id="price" name="price" readonly />
+
+            <!-- Jumlah Tiket/Penumpang -->
+            <label for="passengers" class="form-label">Passengers :</label>
+            <select
+              id="passengers"
+              name="passengers"
+              oninput="getCalculatePrice()"
+              onchange="getCalculatePrice()"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+
+            <!-- Membership -->
+            <h4 class="form-label">Membership :</h4>
+            <label for="member" class="form-checkbox">
+              <input
+                class="form-checkbox"
+                type="checkbox"
+                name="member"
+                id="member"
+                onchange="getCalculatePrice()"
+                oninput="getCalculatePrice()"
+              />I have Membership
+            </label>
+
+            <!-- Diskon -->
+            <label for="discount" class="form-label">Discount</label>
+            <input type="text" name="discount" id="discount" readonly />
+
+            <label for="total" class="form-label">Total :</label>
+            <input type="text" name="total" id="total" readonly />
+
+            <button type="submit" value="save">Submit</button>
+            <!-- <button
+              type="button"
+              onclick="alert('Pesanan Anda Berhasil! Selamat Bersenang-senang!')"
+            >
+              Cancel
+            </button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer><%- include ('footer') %></footer>
+    <script src="/js/order.js"></script>
+  </body>
+</html>

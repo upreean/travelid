@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel.id | Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Tilt+Neon&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link rel="icon" href="/img/icon-blue.png" />
+  </head>
+  <body>
+    <header><%- include ('header') %></header>
+    <div class="top-wrapper" id="home">
+      <div class="container">
+        <!-- <h1>Hallo, Mau liburan kemana nih?</h1> -->
+        <h1>Book your trip today and save money on your next vacation!</h1>
+        <p>
+          Plan your trip with ease and save money with Travel.id. From booking
+          flights and accommodation to finding the best restaurants, we have
+          everything you need for a perfect vacation.
+        </p>
+        <p>
+          Travel.id is an online travel platform that provides comprehensive
+          information and services for travel in Indonesia. With Travel.id, you
+          can easily plan your trip and save money, starting from finding
+          accommodation, booking flight tickets, to finding the best
+          restaurants.
+        </p>
+
+        <div class="btn-wrapper">
+          <a href="/order" class="btn signup">Order Ticket Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="critic-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Critics & Suggestions</h2>
+        </div>
+        <div class="form-input">
+          <form>
+            <label class="form-label" for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Input Your Name"
+              required
+            />
+            <label class="form-label" for="diagnosis">Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Input Your Email"
+              required
+            />
+            <label class="form-label" for="message">Message: </label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Input Your Message"
+              required
+            ></textarea>
+            <h4 class="form-label">I choose information to send that:</h4>
+            <label class="form-checkbox" for="marketing">
+              <input type="checkbox" name="marketing" id="marketing" />
+              Marketing
+            </label>
+            <label class="form-checkbox" for="news-update">
+              <input type="checkbox" name="news-update" id="news-update" />
+              News & Update
+            </label>
+            <label class="form-checkbox" for="product-update">
+              <input
+                type="checkbox"
+                name="product-update"
+                id="product-update"
+              />
+              Product Update
+            </label>
+
+            <button type="submit" onclick="alert('Pesan Berhasil Terkirim!')">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer><%- include ('footer') %></footer>
+    <!-- <div class="wrapper">
+      <div class="ui menu">
+        <div class="ui container">
+          <div class="header item">Travel.id</div>
+          <a class="item">About US</a>
+          <a class="item">Jobs</a>
+          <a class="item">Location</a>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <script src="/public/js/semantic.min.js"></script> -->
+  </body>
+</html>

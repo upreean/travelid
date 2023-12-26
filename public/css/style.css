@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lucida Grande";
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  /* rgba (red, green, blue, alpha) warna dan transparansi pada backgroundnya saja */
+  background-color: rgba(34, 49, 52, 0.9);
+  position: fixed; /*Posisi tetap ketika discroll*/
+  top: 0;
+  z-index: 10; /*Mengubah urutan tumpukan, semakin besar nilainya maka semakin atas posisinya */
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display: none; /* Menyembunyikan elemen */
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 15px;
+  color: #55acee;
+  font-family: "Tilt Neon", sans-serif;
+}
+
+.bx {
+  padding-right: 5px;
+  display: inline;
+}
+
+.top-wrapper {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: rgb(255, 255, 255);
+  background-image: url(../img/bora-bora.jpg);
+  background-size: cover;
+  background-position: 0 -100px;
+  text-align: center; /*Untuk menyejajarkan teks atau tombol (inline/inline-block)*/
+}
+
+.top-wrapper h1 {
+  /* opacity: 0.7; Transparansi */
+  font-size: 45px;
+  letter-spacing: 5px; /*Jarak antar Huruf*/
+  margin-bottom: 15px;
+}
+
+.top-wrapper p {
+  /* opacity: 0.7; Transparansi */
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  /* opacity: 0.8; */
+  border-radius: 10px;
+}
+
+/* .btn:hover {
+  opacity: 1;
+} */
+
+.signup {
+  border: 1px solid #239b76;
+  background-color: #239b76;
+}
+
+.btn-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.signup:hover {
+  border: 1px solid #fff;
+  background-color: rgba(35, 155, 118, 0.2);
+}
+
+.critic-wrapper {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background-color: #f4f4f4;
+}
+
+.reservation-wrapper {
+  /* padding-top: 80px;
+  padding-bottom: 100px;
+  background-image: url(../img/bora-bora.jpg);
+  background-size: cover; */
+  /* background-color: rgb(178, 207, 236); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130vh; /* Menetapkan tinggi sesuai dengan tinggi viewport (100% tinggi layar) */
+  background-image: url(../img/bora-bora.jpg);
+  background-size: cover;
+}
+
+.reservation-wrapper .container {
+  /* height: max-content;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin: 50px 0; */
+  max-width: 600px; /* Menetapkan lebar maksimum container */
+  width: 100%; /* Membuat container 100% lebar */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin: 110px 55px auto; /* Mengatur margin auto untuk memusatkan container di tengah */
+}
+
+.cart-reservation-wrapper {
+  /* padding-top: 80px;
+  padding-bottom: 100px;
+  background-image: url(../img/bora-bora.jpg);
+  background-size: cover; */
+  /* background-color: rgb(178, 207, 236); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140vh; /* Menetapkan tinggi sesuai dengan tinggi viewport (100% tinggi layar) */
+  background-image: url(../img/bora-bora.jpg);
+  background-size: cover;
+}
+
+.cart-reservation-wrapper .container {
+  /* height: max-content;
+  padding: 20px 20px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin: 50px 0; */
+  max-width: 1000px; /* Menetapkan lebar maksimum container */
+  width: 100%; /* Membuat container 100% lebar */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin: 110px 55px auto; /* Mengatur margin auto untuk memusatkan container di tengah */
+}
+
+.heading {
+  padding-bottom: 10px;
+  color: #5f5d60;
+  text-align: center;
+}
+
+.heading h2 {
+  font-weight: bold; /* Mengubah ketebalan Teks */
+}
+
+form .form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: bold;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.form-checkbox {
+  display: flex;
+  /* align-items: center; */
+  /* border: 1px solid #ccc; */
+  padding: 5px;
+}
+
+input[type="checkbox"] {
+  width: max-content;
+  margin-right: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 7px 0;
+  border-radius: 10px;
+  border-width: 1px;
+}
+
+input[type="email"],
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 10px;
+  border-width: 1px;
+  font-size: 14px;
+}
+
+input,
+select {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #999;
+}
+
+button {
+  width: 150px;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  float: right;
+}
+
+button[type="submit"] {
+  color: #fff;
+  border: 1px solid #239b76;
+  background-color: #239b76;
+  background-color: #3c91e6;
+}
+
+/* button[type="button"] {
+  color: #3c91e6;
+  background-color: #cfe8ff;
+} */
+
+button:hover {
+  transition: 0.4s;
+  background-color: #239b76;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  padding: 40px;
+  background-color: rgba(34, 49, 52, 0.9);
+}
+
+.footer-logo {
+  float: left;
+  margin-top: 15px;
+  color: #55acee;
+  font-family: "Tilt Neon", sans-serif;
+  padding-left: 150px;
+}
+
+.footer-nav {
+  float: right;
+  padding-bottom: 20px;
+  padding-right: 150px;
+}
+
+.footer-nav li {
+  list-style: none;
+  padding-bottom: 3px;
+}
+
+.footer-nav a {
+  color: white;
+}
+
+.footer-nav a:hover {
+  color: #9f9f9f;
+}
+
+.media-social {
+  margin-top: 25px;
+}
+
+.media-social a {
+  padding-right: 50px;
+}

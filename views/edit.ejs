@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel.id | Order</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Tilt+Neon&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link rel="icon" href="/img/icon-blue.png" />
+  </head>
+  <body>
+    <header><%- include ('header') %></header>
+    <div class="reservation-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Edit Reservation Form</h2>
+        </div>
+        <div class="form-input">
+          <form method="post" action="/edit/<%- Reservation._id %>">
+            <!-- Nama -->
+            <label for="name" class="form-label">Name :</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value="<%- Reservation.name %>"
+              required
+            />
+
+            <!-- Destinasi Tujuan -->
+            <label for="destination" class="form-label">Destination :</label>
+            <% const destination = ["Tangerang", "Bandung", "Jakarta",
+            "Surabaya", "Solo", "Yogyakarta", "Banda Aceh", "Padang",
+            "Palembang", "Lampung"]; %>
+
+            <select
+              name="destination"
+              id="destination"
+              onchange="getCalculatePrice()"
+              oninput="getCalculatePrice()"
+            >
+              <% for (let i = 0; i < destination.length; i++) {%>
+              <%if(Reservation.destination == destination[i]) { %>
+              <option
+                value="<%- Reservation.passenger %>"
+                selected="<%- Reservation.passenger %>"
+              >
+                <%- Reservation.destination %>
+              </option>
+              <% }else{ %>
+              <option value="<%= destination[i] %>">
+                <%= destination[i] %>
+              </option>
+              <% }} %>
+            </select>
+
+            <!-- Tanggal Keberangkatan -->
+            <label for="date" class="form-label">Date :</label>
+            <input
+              type="datetime-local"
+              id="date"
+              name="date"
+              value="<%- Reservation.date %>"
+              required
+            />
+
+            <!-- Harga Tiket -->
+            <label for="price" class="form-label">Price :</label>
+            <input
+              type="text"
+              id="price"
+              name="price"
+              value="<%- Reservation.price %>"
+              readonly
+            />
+
+            <!-- Jumlah Tiket/Penumpang -->
+            <label for="passengers" class="form-label">Passengers :</label>
+            <% const passenger = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; %>
+            <select
+              id="passengers"
+              name="passengers"
+              oninput="getCalculatePrice()"
+              onchange="getCalculatePrice()"
+            >
+              <% for (let i = 0; i < passenger.length; i++) {%>
+              <%if(Reservation.passengers == passenger[i]) { %>
+              <option
+                value="<%- Reservation.passengers %>"
+                selected="<%- Reservation.passengers %>"
+              >
+                <%- Reservation.passengers %>
+              </option>
+              <% }else{ %>
+              <option value="<%= passenger[i] %>"><%= passenger[i] %></option>
+              <% }} %>
+            </select>
+
+            <!-- Membership -->
+            <h4 class="form-label">Membership :</h4>
+            <label for="member" class="form-checkbox">
+              <input
+                class="form-checkbox"
+                type="checkbox"
+                name="member"
+                id="member"
+                value="<%- Reservation.member %>"
+                onchange="getCalculatePrice()"
+                oninput="getCalculatePrice()"
+              />I have Membership
+            </label>
+
+            <!-- Diskon -->
+            <label for="discount" class="form-label">Discount</label>
+            <input
+              type="text"
+              name="discount"
+              id="discount"
+              value="<%- Reservation.discount %>"
+              readonly
+            />
+
+            <label for="total" class="form-label">Total :</label>
+            <input
+              type="text"
+              name="total"
+              id="total"
+              value="<%- Reservation.total %>"
+              readonly
+            />
+
+            <button type="submit" value="save">Submit</button>
+            <!-- <button
+              type="button"
+              onclick="alert('Pesanan Anda Berhasil! Selamat Bersenang-senang!')"
+            >
+              Cancel
+            </button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer><%- include ('footer') %></footer>
+    <script src="/js/order.js"></script>
+  </body>
+</html>

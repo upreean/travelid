@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel.id | Cart</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Tilt+Neon&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- icon -->
+    <link rel="icon" href="/img/icon-blue.png" />
+  </head>
+  <body>
+    <header><%- include ('header') %></header>
+    <!-- <h1>Ini container cart</h1> -->
+    <div class="cart-reservation-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2 class="order-title">My Reservation</h2>
+        </div>
+        <table class="table table-success table-striped table-hover">
+          <thead>
+            <th>No.</th>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Destination</th>
+            <th>Price</th>
+            <th>Passengers</th>
+            <th>Membership</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Edit</th>
+            <th>Hapus</th>
+          </thead>
+          <tbody>
+            <% reservations.forEach((Reservation, index) => { %>
+            <tr>
+              <td><%- (index + 1) + '.' %></td>
+              <td><%- Reservation.date %></td>
+              <td><%- Reservation.name %></td>
+              <td><%- Reservation.destination %></td>
+              <td><%- Reservation.price %></td>
+              <td><%- Reservation.passengers %></td>
+              <td><%- Reservation.member %></td>
+              <td><%- Reservation.discount %></td>
+              <td><%- Reservation.total %></td>
+              <td>
+                <a href="/edit/<%= Reservation._id %>="
+                  ><i class="bx bxs-edit"></i
+                ></a>
+              </td>
+              <td>
+                <a href="/delete/<%= Reservation._id %>"
+                  ><i class="bx bxs-trash"></i
+                ></a>
+              </td>
+            </tr>
+            <% }) %>
+            <!-- <tr>
+              <td>12-03-2024</td>
+              <td>John Doe</td>
+              <td>Surabaya</td>
+              <td>$100</td>
+              <td>2</td>
+              <td>Yes</td>
+              <td>$10</td>
+              <td>$190</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer><%- include ('footer') %></footer>
+  </body>
+</html>
