@@ -25,7 +25,7 @@ db.once("open", () => {
 
 // middleware
 app.set("view engine", "ejs");
-//
+// path
 app.set("views", path.join(path.resolve(), "views"));
 
 app.use(express.static("public"));
@@ -33,7 +33,7 @@ app.use(express.static("public"));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//
+// path
 app.use(express.static(path.join(path.resolve(), "public")));
 
 // parse application/json
