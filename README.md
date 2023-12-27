@@ -2,21 +2,29 @@
 
 ## Deskripsi Singkat
 
-Website Travel.Id adalah sebuah website yang menyediakan informasi dan layanan untuk perjalanan wisata di Indonesia. Website ini memiliki konten yang lengkap, mulai dari informasi destinasi wisata, tempat penginapan, tiket pesawat, hingga tips wisata.
+Website Travel.id adalah sebuah website yang menyediakan informasi dan layanan untuk perjalanan wisata di Indonesia. Website ini memiliki konten yang lengkap, mulai dari informasi destinasi wisata, tempat penginapan, tiket pesawat, hingga tips wisata.
 
 ## Fitur yang tersedia
 
 Fitur-fitur yang tersedia
-Fitur Pemesanan: Pengguna dapat memesan tiket melalui website Travel.Id.
-Fitur Form Ulasan, Kritik dan Saran : Pengguna dapat memberikan ulasan, penilaian, kritik dan saran terhadap fitur destinasi wisata, tempat penginapan, dan tiket pesawat.
+Fitur Pemesanan: Pengguna dapat memesan tiket melalui website Travel.id.
+
+Fitur Form Ulasan, Kritik dan Saran : Pengguna dapat memberikan ulasan, penilaian, kritik dan saran terhadap fitur yang terdapat dalam website Travel.id.
 
 ## CRUD
 
 - Create
-  ![]()
+  ![](public/img/doc/create.png)
 
 - Read
+  ![](public/img/doc/read.png)
 
 - Update
 
+  - Form
+    ![](public/img/doc/update-form.png)
+  - Table
+    ![](public/img/doc/update-table.png)
+
 - Delete
+  ![](public/img/doc/delete.png)
