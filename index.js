@@ -3,7 +3,6 @@ const homeRoute = require("./routes/home");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
-const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 // const uri = "mongodb://127.0.0.1:27017/travelid";
@@ -36,7 +35,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //
 app.use(express.static(path.join(path.resolve(), "public")));
-app.use(cookieParser("secret"));
 
 // parse application/json
 app.use(bodyParser.json());
