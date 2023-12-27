@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const homeRoute = require("./routes/home");
 const mongoose = require("mongoose");
@@ -6,9 +8,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
-const connectionString = process.env.MONGODB_CONNECT_URI;
+const uri = process.env.MONGODB_CONNECT_URI;
 
-mongoose.connect(connectionString, {
+mongoose.connect(uri, {
   useNewUrlParser: true,
 });
 
