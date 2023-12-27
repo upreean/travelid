@@ -24,6 +24,7 @@ db.once("open", () => {
 
 // middleware
 app.set("view engine", "ejs");
+app.set("views", path.join(path.resolve(), "views"));
 app.use(express.static("public"));
 
 // parse application/x-www-form-urlencoded
